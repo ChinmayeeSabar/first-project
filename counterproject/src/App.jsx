@@ -3,15 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
 
-  let [counter,setCounter] = useState(5)
+  const [counter,setCounter] = useState(5)
 
   const addValue = () =>{
-    // console.log("clicked",counter)
-    // counter = counter + 1
     if(counter < 20)
-    setCounter(counter + 1)
+    // setCounter(counter + 1) //To increament by 1
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
   }
   
   const removeValue = () =>{
@@ -21,7 +24,7 @@ function App() {
 
   return (
     <>
-    <h1>Oh My God</h1>
+    <h1>Counter App</h1>
     <h2>Counter Value: {counter}</h2>
 
     <button onClick={addValue}>
